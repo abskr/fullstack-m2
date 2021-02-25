@@ -28,7 +28,7 @@
     <style>
       
         /* EX1) Write a selector to target the <title> of the page */
-        title {
+        .jumbotron h1 {
             display: none;
         }
 
@@ -48,6 +48,9 @@
         }
 
         /* EX5) Write a selector to target the "even" links in the navbar */
+        nav > a:nth-child(2n){
+            font-weight: 100;
+        }
         /* EX6) Write a selector to target the last blog post */
         .blog-main > .blog-post:last-of-type{
             background-color: limegreen;
@@ -61,7 +64,8 @@
             color: red;
         }
         /* EX9) Write a selector to target the "back to top" link #### EXTRA Try doing it without targeting the footer element directly */
-        .blog-footer > p:last-child {
+        main + *{
+        /* .blog-footer > p:last-child { */
             text-align: center;
         }
         /* EX10) Write a selector to target the footer */
@@ -477,19 +481,51 @@
     </footer>
 
     <script>
-      /*
-        JS Exercises
-        EX11) Write a function to add a new link into the navbar
-        EX12) Write a function to change the color of the main title
-        EX13) Write a function to change the background of the jumbotron
-        EX14) Write a function to remove all the links under "Elsewhere"
-        EX15) Write a function to change the column size for post headings
-        EX16) Write a function to remove the "Search" magnifying glass icon
-        EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
-        EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
-        EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
-        EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
-    */
+      
+        //JS Exercises
+        //EX11) Write a function to add a new link into the navbar
+        const addNewLink = () => {
+            const grabNav = document.querySelector("nav")
+            let newLink = document.createElement("a")
+            newLink.setAttribute("class", "p-2 text-muted")
+            newLink.setAttribute("href", "#")
+            //a.innerText = document.getElementById(textInput).value
+            newLink.innerText = "ein Beispiel"
+            grabNav.appendChild(newLink)
+        }
+
+        //EX12) Write a function to change the color of the main title
+        const mainTitleColorChange = () =>{
+            let grabMainTitles = document.querySelectorAll(".blog-post-title")
+            
+            for (i=0; i<grabMainTitles.length; i++){
+            grabMainTitles[i].style.color = '#' + (Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
+            }
+        }
+        
+        //EX13) Write a function to change the background of the jumbotron
+        //EX14) Write a function to remove all the links under "Elsewhere"
+
+        const delElsewhereLinks = () => {
+            let grabOList = document.querySelector(".list-unstyled:last-of-type li")
+            for (i=0; i < grabOList.length; i++){
+            delElsewhereLinks[i].remove()
+            }
+        }
+
+        //EX15) Write a function to change the column size for post headings
+        const changeColSize = () => {
+        [...document.querySelectorAll(".col-md-6")].forEach((col) => {
+          col.classList.remove("col-md-6")
+          col.classList.add("col-md-12")
+        })
+      }
+
+        //EX16) Write a function to remove the "Search" magnifying glass icon
+        //EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
+        //EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
+        //EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
+        //EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
     </script>
   </body>
 </html>
