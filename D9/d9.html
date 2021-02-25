@@ -14,6 +14,338 @@
 
 <body>
 
+  <!DOCTYPE html>
+  <!--
+ASSIGNMENT RULES
+- The solution must be pushed to the repository and linked to EduFlow by the end of the day.
+- You can google / use StackOverflow BUT we suggest you to use just the material provided.
+- To test the page, just open it with your default browser.
+- Use Bootstrap4 classes to render the page.
+- Use correctly containers and rows in order to achieve a great display.
+ASSIGNMENT TOPIC
+You are creating a website to showcase your favorite music albums.
+In this page you'd like to have a short bio of yourself, the top albums of your life, 
+the worst album you ever listen to and everything related to the music you love.
+NOTE:
+Most of the times, even the most expert of designers needs inspiration.
+Spend 30 minutes surfing the web and searching for the way of representing album that you like the most.
+Could be the Amazon way, the  or Apple music way or some other blog out there.
+-->
+
+  <html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css" />
+
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand">Bskr</a>
+        <!-- need some contents-->
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-dark" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- EXERCISE 1 Use the specific bootstrap component to implement a Breadcrumb -->
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Library</li>
+      </ol>
+    </nav>
+
+    <!-- EXERCISE 2 Create a Jumbotron section with a quick explanation / image of the website -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Fluid jumbotron</h1>
+        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- EXERCISE 4
+            Foreach album in the favorite list, use the Bootstrap Card to contain it.
+            Use card layouts to format it in the best and more compatible way. -->
+      <h2>Favorite albums</h2>
+      <div class="row justify-content-around fav-albums">
+        <div class="col-6 col-md-4 col-lg-3 my-3">
+          <div class="card position-relative">
+            <!-- EXERCISE 3 Foreach album in the favorite list, place the genre inside a badge -->
+            <img src="lesezeichen-fur-favoriten.svg" class="position-absolute" height="32" width="32">
+            <img src="http://placehold.it/200x150" class="card-img-top" alt="test-card" />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 my-3">
+          <div class="card position-relative">
+            <!-- EXERCISE 3 Foreach album in the favorite list, place the genre inside a badge -->
+            <img src="lesezeichen-fur-favoriten.svg" class="position-absolute" height="32" width="32">
+            <img src="http://placehold.it/200x150" class="card-img-top" alt="test-card" />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 my-3">
+          <div class="card position-relative">
+            <!-- EXERCISE 3 Foreach album in the favorite list, place the genre inside a badge -->
+            <img src="lesezeichen-fur-favoriten.svg" class="position-absolute" height="32" width="32">
+            <img src="http://placehold.it/200x150" class="card-img-top" alt="test-card" />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 my-3">
+          <div class="card position-relative">
+            <!-- EXERCISE 3 Foreach album in the favorite list, place the genre inside a badge -->
+            <img src="lesezeichen-fur-favoriten.svg" class="position-absolute" height="32" width="32">
+            <img src="http://placehold.it/200x150" class="card-img-top" alt="test-card" />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <hr>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Length</th>
+            <th scope="col">Song Title</th>
+            <th scope="col">Artist</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>4:03</td>
+            <td>Driver Licence</td>
+            <td>Olivia Rodrigo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>3:26</td>
+            <td>Calling My Phone</td>
+            <td>Lil Tjay ft. 6LACK</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>3:37</td>
+            <td>Save Your Tears</td>
+            <td>The Weeknd</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>3:24</td>
+            <td>Blinding Lights</td>
+            <td>The Weekend</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>4:04</td>
+            <td>34+35</td>
+            <td>Ariana Grande ft. Doja Cat, Megan Thee Stallion</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-6 col-md-4 col-lg-3 my-3">
+          <div class="card">
+            <img src="http://placehold.it/200x150" class="card-img-top" alt="test-card" />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 my-3">
+          <div class="card">
+            <img src="http://placehold.it/200x150" class="card-img-top" alt="test-card" />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 my-3">
+          <div class="card">
+            <img src="http://placehold.it/200x150" class="card-img-top" alt="test-card" />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-6 col-md-4 col-lg-3 my-3">
+          <div class="card">
+            <img src="http://placehold.it/200x150" class="card-img-top" alt="test-card" />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 my-3">
+          <div class="card">
+            <img src="http://placehold.it/200x150" class="card-img-top" alt="test-card" />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 my-3">
+          <div class="card">
+            <img src="http://placehold.it/200x150" class="card-img-top" alt="test-card" />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 my-3">
+          <div class="card">
+            <img src="http://placehold.it/200x150" class="card-img-top" alt="test-card" />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 my-3">
+          <div class="card">
+            <img src="http://placehold.it/200x150" class="card-img-top" alt="test-card" />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <!-- EXERCISE 5
+            Worst album list! Find out the music you don't really like or you find overrated and list it
+            in this "hall of shame" chart!
+        -->
+
+    <!-- EXERCISE 6
+            Do you have any musician / band you admire or you are fan of?
+            This section is dedicated to him / her / them!
+            Feel free to experiment in this part of the page.
+        -->
+
+    <!-- EXERCISE 7
+            Just covers!
+            Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
+            Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
+        -->
+
+
+    <!-- EXERCISE 8
+            Implement a footer with some information / social links
+        -->
+    <footer class="container mt-5">
+
+      <div class="row">
+        <!-- EXERCISE 8 Add to the footer an extra column with the same links of the top nav. -->
+        <div class="col-1"><a class="navbar-brand">Bskr</a></div>
+        <div class="col-7">
+          <h5 class="text-md-right">Contact Me</h5>
+          <hr>
+        </div>
+        <div class="col-4">
+          <form>
+            <fieldset class="form-group">
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            </fieldset>
+            <fieldset class="form-group">
+              <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
+            </fieldset>
+            <fieldset class="form-group text-xs-right">
+              <button type="button" class="btn btn-dark">Send</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+    </footer>
+
+
+    <!-- EXTRA:
+            EXERCISE 9
+            Create album details that are going to be toggled on and off by clicking on the album image
+        -->
+
+    <!-- EXERCISE 10
+            Add a button to each section. By clicking on it the section body appears (if hidden) or disappears (if visible)
+        -->
+
+    <!--
+            EXERCISE 11
+            Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
+        -->
+  </body>
+
+  </html>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
